@@ -12,7 +12,7 @@ const LeavingTheGunClub = ({ isCollapsed, toggle }) => {
         <View style={styles.content}>
           <Text style={styles.section}>
             First of all, thank you for your service. Not many of us veterans
-            out there and especially those who transition successfully are even
+            out there and those who transition successfully are even
             rarer. I hope to help ease that transition as a former servicemember
             myself.
           </Text>

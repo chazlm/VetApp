@@ -14,7 +14,7 @@ const Home = () => {
   const [activeTab, setActiveTab] = useState("LeavingTheGunClub");
 
   const toggleTab = (tab) => {
-    setActiveTab(tab);
+    setActiveTab(activeTab === tab ? null : tab);
   };
 
   return (

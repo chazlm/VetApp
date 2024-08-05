@@ -92,9 +92,9 @@ function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <NavigationContainer>
-        <View style={styles.header}>
-        </View>
-        <Home />
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="VetApp" component={Home} />
+        </Stack.Navigator>
         {/* <Tab.Screen name="Login" component={LoginScreen} /> */}
       </NavigationContainer>
     </GestureHandlerRootView>
