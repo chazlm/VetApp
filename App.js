@@ -87,31 +87,14 @@ const LoginScreen = ({ navigation }) => {
   );
 };
 
-const MainTabs = () => (
-  <Tab.Navigator
-    screenOptions={{
-      tabBarActiveTintColor: "#e91e63",
-      tabBarInactiveTintColor: "grey",
-      tabBarStyle: { backgroundColor: "#f8f8f8" },
-    }}
-  >
-    <Tab.Screen
-      name="VetApp"
-      component={Home}
-      options={{
-        tabBarLabel: "Home",
-        tabBarIcon: () => <Text>🏠</Text>,
-      }}
-    />
-
-  </Tab.Navigator>
-);
 
 function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <NavigationContainer>
-        {MainTabs()}
+        <View style={styles.header}>
+        </View>
+        <Home />
         {/* <Tab.Screen name="Login" component={LoginScreen} /> */}
       </NavigationContainer>
     </GestureHandlerRootView>

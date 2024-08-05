@@ -22,7 +22,9 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "static"
     },
     "plugins": [
       "expo-secure-store"
@@ -32,6 +34,12 @@
         "projectId": "968cd552-e5f0-492e-9a38-b6b2d6f6c7a8"
       }
     },
-    "owner": "scalper"
+    "owner": "scalper",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/968cd552-e5f0-492e-9a38-b6b2d6f6c7a8"
+    }
   }
 }
