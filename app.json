@@ -1,7 +1,8 @@
 {
   "expo": {
     "name": "StickerSmash",
-    "slug": "StickerSmash",
+    "slug": "vetapp",
+    "scheme": "vet",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -22,6 +23,15 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-secure-store"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "968cd552-e5f0-492e-9a38-b6b2d6f6c7a8"
+      }
+    },
+    "owner": "scalper"
   }
 }

@@ -1,34 +1,19 @@
-// App.js
-import "react-native-gesture-handler";
-import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
-import { StyleSheet, Text, View, Button } from "react-native";
+import React from "react";
 import * as AuthSession from "expo-auth-session";
-import axios from "axios";
-import * as SecureStore from "expo-secure-store";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-
-import Home from "./pages/Home";
-import Settings from "./pages/Settings";
-import GIBill from "./pages/GIBill";
-import VALoan from "./pages/VALoan";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
-const Tab = createBottomTabNavigator();
-const Stack = createStackNavigator();
-
-const clientId = "YOUR_CLIENT_ID";
-const clientSecret = "YOUR_CLIENT_SECRET";
-const discovery = {
-  authorizationEndpoint:
-    "https://api.id.me/oauth/authorize?client_id=9c472741eb10921e06ff3be2418bfb52&redirect_uri=https://widevision.live/&response_type=code&scope=military",
-};
-
-const redirectUri = AuthSession.makeRedirectUri({ useProxy: true });
+import { StyleSheet, Text, View } from "react-native";
+import { Button } from "react-native-elements";
 
 const LoginScreen = ({ navigation }) => {
+  const clientId = "9c472741eb10921e06ff3be2418bfb52";
+  const clientSecret = "d3f696f1cfe9575441c30e8adddd3d88";
+  const discovery = {
+    authorizationEndpoint:
+      "https://api.id.me/oauth/authorize?client_id=9c472741eb10921e06ff3be2418bfb52&redirect_uri=https://widevision.live/&response_type=code&scope=military",
+    tokenEndpoint: "https://api.id.me/oauth/token",
+  };
+
+  const redirectUri = AuthSession.makeRedirectUri({ useProxy: true });
+
   const [request, response, promptAsync] = AuthSession.useAuthRequest(
     {
       clientId,
@@ -87,37 +72,6 @@ const LoginScreen = ({ navigation }) => {
   );
 };
 
-const MainTabs = () => (
-  <Tab.Navigator
-    screenOptions={{
-      tabBarActiveTintColor: "#e91e63",
-      tabBarInactiveTintColor: "grey",
-      tabBarStyle: { backgroundColor: "#f8f8f8" },
-    }}
-  >
-    <Tab.Screen
-      name="VetApp"
-      component={Home}
-      options={{
-        tabBarLabel: "Home",
-        tabBarIcon: () => <Text>🏠</Text>,
-      }}
-    />
-
-  </Tab.Navigator>
-);
-
-function App() {
-  return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <NavigationContainer>
-        {MainTabs()}
-        {/* <Tab.Screen name="Login" component={LoginScreen} /> */}
-      </NavigationContainer>
-    </GestureHandlerRootView>
-  );
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -141,4 +95,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default LoginScreen;
