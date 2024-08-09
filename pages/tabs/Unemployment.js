@@ -8,45 +8,12 @@ import {
   TouchableOpacity,
 } from "react-native";
 import Collapsible from "react-native-collapsible";
-import { Picker } from "@react-native-picker/picker";
-import { stateData } from "../../src/utils/stateData";
+import UnemploymentCalculator from "./subtabs/UnemploymentCalculator";
 
-const calculateUnemployment = (state, monthlyEarnings) => {
-  const stateInfo = stateData[state];
-  if (!stateInfo) return "Invalid state";
 
-  const quarterlyEarnings = monthlyEarnings * 3;
-  const weeklyBenefit = quarterlyEarnings * 0.04; // Adjusted to ensure $2,000 monthly yields $240 weekly
-  return Math.min(
-    Math.max(weeklyBenefit, stateInfo.minBenefit),
-    stateInfo.maxBenefit
-  );
-};
 
-const generateBenefitText = (state, benefit) => {
-  const stateInfo = stateData[state];
-  if (!stateInfo) return "Invalid state";
+const UnemploymentBenefitCalculator = ({ isCollapsed, toggle, theme }) => {
 
-  return `Estimated Weekly Benefit for ${stateInfo.name} (Min: $${
-    stateInfo.minBenefit
-  }, Max: $${stateInfo.maxBenefit}): $${benefit.toFixed(2)}`;
-};
-
-const UnemploymentBenefitCalculator = ({ isCollapsed, toggle }) => {
-  const [state, setState] = useState("AL");
-  const [monthlyEarnings, setMonthlyEarnings] = useState("2000");
-  const [weeklyBenefit, setWeeklyBenefit] = useState(null);
-
-  const handleCalculate = () => {
-    const monthly = parseFloat(monthlyEarnings);
-    if (isNaN(monthly)) {
-      setWeeklyBenefit("Invalid input");
-      return;
-    }
-    const benefit = calculateUnemployment(state, monthly);
-    const benefitText = generateBenefitText(state, benefit);
-    setWeeklyBenefit(benefitText);
-  };
 
   return (
     <>
@@ -73,37 +40,7 @@ const UnemploymentBenefitCalculator = ({ isCollapsed, toggle }) => {
             unemployment benefit.
           </Text>
           <View style={styles.toolContainer}>
-            <Text style={styles.label}>Select your state:</Text>
-            <Picker
-              selectedValue={state}
-              style={styles.picker}
-              onValueChange={(itemValue) => setState(itemValue)}
-            >
-              {Object.keys(stateData).map((stateKey) => (
-                <Picker.Item
-                  key={stateKey}
-                  label={stateData[stateKey].name}
-                  value={stateKey}
-                />
-              ))}
-            </Picker>
-            <Text style={styles.label}>
-              Enter your monthly earnings (before tax):
-            </Text>
-            <TextInput
-              style={styles.input}
-              placeholder="Monthly Earnings"
-              keyboardType="numeric"
-              returnKeyType="done"
-              value={monthlyEarnings}
-              onChangeText={setMonthlyEarnings}
-              onSubmitEditing={handleCalculate}
-            />
-            <Button title="Calculate" onPress={handleCalculate} />
-            {weeklyBenefit && (
-              <Text style={styles.result}>{weeklyBenefit}</Text>
-            )}
-            <View style={styles.stateBox}></View>
+            <UnemploymentCalculator />
           </View>
         </View>
       </Collapsible>
@@ -114,8 +51,8 @@ const UnemploymentBenefitCalculator = ({ isCollapsed, toggle }) => {
 const styles = StyleSheet.create({
   tab: {
     padding: 10,
-    backgroundColor: "#f1f1f1",
-    marginVertical: 5,
+    backgroundColor: "white",
+    marginBottom: 2
   },
   tabTitle: {
     fontSize: 18,
@@ -123,7 +60,8 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 10,
-    backgroundColor: "#e2e2e2",
+    backgroundColor: "white",
+    marginBottom: 2,
   },
   section: {
     fontSize: 16,

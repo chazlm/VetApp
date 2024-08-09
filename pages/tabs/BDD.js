@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Linking } from "react-native";
 import Collapsible from "react-native-collapsible";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-const BDD = ({ isCollapsed, toggle }) => {
+const BDD = ({ isCollapsed, toggle, theme }) => {
   return (
     <>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
@@ -97,8 +97,8 @@ const BDD = ({ isCollapsed, toggle }) => {
 const styles = StyleSheet.create({
   tab: {
     padding: 10,
-    backgroundColor: "#f1f1f1",
-    marginVertical: 5,
+    backgroundColor: "white",
+    marginBottom: 2
   },
   tabTitle: {
     fontSize: 18,
@@ -110,7 +110,8 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 10,
-    backgroundColor: "#e2e2e2",
+    backgroundColor: "white",
+    marginBottom: 2,
   },
   section: {
     fontSize: 16,

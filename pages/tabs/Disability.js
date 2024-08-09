@@ -9,7 +9,7 @@ import DisabilityCalculator from "./subtabs/DisabilityCalculator";
 
 // import { } from ''
 
-const Disability = ({ isCollapsed, toggle }) => {
+const Disability = ({ isCollapsed, toggle, theme }) => {
 
   const [state, setState] = useState({
     clicked: false,
@@ -23,7 +23,10 @@ const Disability = ({ isCollapsed, toggle }) => {
 
   return (
     <SafeAreaProvider>
-      <TouchableOpacity onPress={toggle} style={styles.tab}>
+      <TouchableOpacity onPress={toggle} style={[styles.tab, isCollapsed ? {
+        borderBottomLeftRadius: 15,
+        borderBottomRightRadius: 15,
+      } : {}]}>
         <Text style={styles.tabTitle}>VA Disability</Text>
       </TouchableOpacity>
       <Collapsible collapsed={isCollapsed}>
@@ -71,8 +74,8 @@ const Disability = ({ isCollapsed, toggle }) => {
 const styles = StyleSheet.create({
   tab: {
     padding: 10,
-    backgroundColor: "#f1f1f1",
-    marginVertical: 5,
+    backgroundColor: "white",
+    marginBottom: 2
   },
   tabTitle: {
     fontSize: 18,
@@ -80,7 +83,8 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 10,
-    backgroundColor: "#e2e2e2",
+    backgroundColor: "white",
+    marginBottom: 2,
   },
   section: {
     fontSize: 16,

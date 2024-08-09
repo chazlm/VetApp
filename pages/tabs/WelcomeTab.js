@@ -2,12 +2,12 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Collapsible from "react-native-collapsible";
 
-const LeavingTheGunClub = ({ isCollapsed, toggle }) => {
+const LeavingTheGunClub = ({ isCollapsed, toggle, theme }) => {
   return (
     <>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
         <Text style={styles.tabTitle}>Leaving the Gun Club?</Text>
-      </TouchableOpacity>
+      </TouchableOpacity >
       <Collapsible collapsed={isCollapsed}>
         <View style={styles.content}>
           <Text style={styles.section}>
@@ -34,8 +34,10 @@ const LeavingTheGunClub = ({ isCollapsed, toggle }) => {
 const styles = StyleSheet.create({
   tab: {
     padding: 10,
-    backgroundColor: "#f1f1f1",
-    marginVertical: 5,
+    backgroundColor: "white",
+    borderTopRightRadius: 15,
+    borderTopLeftRadius: 15,
+    marginBottom: 2
   },
   tabTitle: {
     fontSize: 18,
@@ -43,7 +45,8 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 10,
-    backgroundColor: "#e2e2e2",
+    backgroundColor: "white",
+    marginBottom: 2
   },
   section: {
     fontSize: 16,
