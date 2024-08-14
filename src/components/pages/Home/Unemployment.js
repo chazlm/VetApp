@@ -8,13 +8,9 @@ import {
   TouchableOpacity,
 } from "react-native";
 import Collapsible from "react-native-collapsible";
-import UnemploymentCalculator from "./subtabs/UnemploymentCalculator";
-
-
+import UnemploymentCalculator from "./UnemploymentCalculator";
 
 const UnemploymentBenefitCalculator = ({ isCollapsed, toggle, theme }) => {
-
-
   return (
     <>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
@@ -52,7 +48,7 @@ const styles = StyleSheet.create({
   tab: {
     padding: 10,
     backgroundColor: "white",
-    marginBottom: 2
+    marginBottom: 5,
   },
   tabTitle: {
     fontSize: 18,
@@ -61,11 +57,11 @@ const styles = StyleSheet.create({
   content: {
     padding: 10,
     backgroundColor: "white",
-    marginBottom: 2,
+    marginBottom: 5,
   },
   section: {
     fontSize: 16,
-    marginBottom: 20,
+    marginBottom: 50,
   },
   toolContainer: {
     marginVertical: 20,

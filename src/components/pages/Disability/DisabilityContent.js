@@ -1,32 +1,20 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Linking, Dimensions } from "react-native";
-import Collapsible from "react-native-collapsible";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Image } from "react-native";
-import VADisabilityFAQ from "./subtabs/DisabilityFAQ";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import DisabilityCalculator from "./subtabs/DisabilityCalculator";
+import Collapsible from "react-native-collapsible";
+import DisabilityCalculator from "./DisabilityCalculator";
 
 // import { } from ''
 
-const Disability = ({ isCollapsed, toggle, theme }) => {
-
-  const [state, setState] = useState({
-    clicked: false,
-    style: {
-      data: { fill: "tomato" }
-    }
-  });
-
-  const screenWidth = Dimensions.get('window').width;
+const DisabilityContent = ({ isCollapsed, toggle, theme }) => {
+  const screenWidth = Dimensions.get("window").width;
   const imageWidth = screenWidth * 0.9; // Adjust the percentage as needed
 
   return (
     <SafeAreaProvider>
-      <TouchableOpacity onPress={toggle} style={[styles.tab, isCollapsed ? {
-        borderBottomLeftRadius: 15,
-        borderBottomRightRadius: 15,
-      } : {}]}>
+      <TouchableOpacity onPress={toggle} style={styles.tab}>
         <Text style={styles.tabTitle}>VA Disability</Text>
       </TouchableOpacity>
       <Collapsible collapsed={isCollapsed}>
@@ -46,26 +34,31 @@ const Disability = ({ isCollapsed, toggle, theme }) => {
           </Text>
           <View style={styles.chartContainer}>
             <Image
-              source={require('../../assets/va-disability-bar-chart.png')}
+              source={require("../../../../assets/va-disability-bar-chart.png")}
               style={[styles.image, { width: imageWidth, height: imageWidth }]}
               resizeMode="contain"
             />
           </View>
 
           <Text style={styles.bulletPoint}>
-            • There are a lot of that come with VA Disability - not just financially. You will get access to VR&E, Space-A Flights, CHAMPVA, DEA, and more. There's an exhaustive list that goes over benefits by disability percentages
-            .
+            • There are a lot of that come with VA Disability - not just
+            financially. You will get access to VR&E, Space-A Flights, CHAMPVA,
+            DEA, and more. There's an exhaustive list that goes over benefits by
+            disability percentages .
           </Text>
-          <Text style={styles.link} onPress={() => Linking.openURL("https://www.reddit.com/r/VeteransBenefits/wiki/combinedbenefits/")}>
+          <Text
+            style={styles.link}
+            onPress={() =>
+              Linking.openURL(
+                "https://www.reddit.com/r/VeteransBenefits/wiki/combinedbenefits/"
+              )
+            }
+          >
             Comprehensive Guide on Reddit
           </Text>
 
-
-
           <DisabilityCalculator />
-          <VADisabilityFAQ />
         </View>
-
       </Collapsible>
     </SafeAreaProvider>
   );
@@ -75,7 +68,7 @@ const styles = StyleSheet.create({
   tab: {
     padding: 10,
     backgroundColor: "white",
-    marginBottom: 2
+    marginBottom: 5,
   },
   tabTitle: {
     fontSize: 18,
@@ -84,11 +77,11 @@ const styles = StyleSheet.create({
   content: {
     padding: 10,
     backgroundColor: "white",
-    marginBottom: 2,
+    marginBottom: 5,
   },
   section: {
     fontSize: 16,
-    marginBottom: 20,
+    marginBottom: 50,
   },
   bulletPoint: {
     fontSize: 16,
@@ -101,16 +94,16 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline",
   },
   chartContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    padding: '2rem'
+    display: "flex",
+    alignItems: "center",
+    padding: "2rem",
   },
   link: {
     fontSize: 16,
     color: "blue",
     textDecorationLine: "underline",
-    marginBottom: 20,
-    marginLeft: 20
+    marginBottom: 50,
+    marginLeft: 20,
   },
   question: {
     fontSize: 18,
@@ -129,7 +122,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 16,
   },
-
 });
 
-export default Disability;
+export default DisabilityContent;

@@ -10,16 +10,16 @@ import axios from "axios";
 import * as SecureStore from "expo-secure-store";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-import Home from "./pages/Home";
-import Settings from "./pages/Settings";
-import GIBill from "./pages/GIBill";
-import VALoan from "./pages/VALoan";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Header from "./src/components/Header";
 import { ThemeProvider } from "./src/utils/theme";
+import { HomePage } from "./src/components/pages/Home/HomePage";
+import { GIBPage } from "./src/components/pages/GIB/GiBillPage";
+import { VALoanPage } from "./src/components/pages/Loan/VALoanPage";
+import { DisabilityPage } from "./src/components/pages/Disability/DisabilityPage";
+
 
 const Tab = createBottomTabNavigator();
-const Stack = createStackNavigator();
 
 
 function App() {
@@ -27,13 +27,14 @@ function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <NavigationContainer>
         <ThemeProvider>
-          <Stack.Navigator initialRouteName="Home">
-            <Stack.Screen name="VetApp" component={Home} options={{
-              header: () =>
-                <></>
-            }} />
+          <Header />
+          <Tab.Navigator initialRouteName="Home">
+            <Tab.Screen name="VetApp" component={HomePage} options={{ headerShown: false }} />
+            <Tab.Screen name="GI Bill" component={GIBPage} options={{ headerShown: false }} />
+            <Tab.Screen name="VA Loan" component={VALoanPage} options={{ headerShown: false }} />
+            <Tab.Screen name="VA Disability" component={DisabilityPage} options={{ headerShown: false }} />
             {/* <Stack.Screen name="Login" component={LoginScreen} /> */}
-          </Stack.Navigator>
+          </Tab.Navigator>
         </ThemeProvider>
       </NavigationContainer>
     </GestureHandlerRootView>

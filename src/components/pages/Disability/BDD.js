@@ -7,15 +7,17 @@ const BDD = ({ isCollapsed, toggle, theme }) => {
   return (
     <>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
-        <Text style={styles.tabTitle}>Benefits Delivery at Discharge
-          <Text style={styles.tabSubtitle}> (Entryway to VA Disability)
-          </Text>
+        <Text style={styles.tabTitle}>
+          Benefits Delivery at Discharge
+          <Text style={styles.tabSubtitle}> (Entryway to VA Disability)</Text>
         </Text>
       </TouchableOpacity>
       <Collapsible collapsed={isCollapsed}>
         <View style={styles.content}>
           <Text style={styles.header}>
-            BDD (Benefits at Discharge) helps servicememebers get their disability rating faster. This is the best and quickest way to receive your rating with the most accuracy.
+            BDD (Benefits at Discharge) helps servicememebers get their
+            disability rating faster. This is the best and quickest way to
+            receive your rating with the most accuracy.
           </Text>
           <Text style={styles.section}>
             VA Disability Benefits can be ridiculed amongst servicemembers
@@ -98,24 +100,24 @@ const styles = StyleSheet.create({
   tab: {
     padding: 10,
     backgroundColor: "white",
-    marginBottom: 2
+    marginBottom: 5,
   },
   tabTitle: {
     fontSize: 18,
     fontWeight: "bold",
   },
   tabSubtitle: {
-    fontSize: '14px',
-    color: 'grey'
+    fontSize: "14px",
+    color: "grey",
   },
   content: {
     padding: 10,
     backgroundColor: "white",
-    marginBottom: 2,
+    marginBottom: 5,
   },
   section: {
     fontSize: 16,
-    marginBottom: 20,
+    marginBottom: 50,
   },
   bulletPoint: {
     fontSize: 16,
@@ -129,9 +131,9 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 16,
-    marginBottom: 20,
-    fontWeight: 'bold'
-  }
+    marginBottom: 50,
+    fontWeight: "bold",
+  },
 });
 
 export default BDD;
