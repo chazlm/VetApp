@@ -18,9 +18,15 @@ import { GIBPage } from "./src/components/pages/GIB/GiBillPage";
 import { VALoanPage } from "./src/components/pages/Loan/VALoanPage";
 import { DisabilityPage } from "./src/components/pages/Disability/DisabilityPage";
 
-
 const Tab = createBottomTabNavigator();
 
+const loadFonts = () => {
+  return Font.loadAsync({
+    OpenSans: require("./assets/fonts/OpenSans.ttf"),
+    Montserrat: require("./assets/fonts/Montserrat.ttf"),
+    // Add more fonts here as needed
+  });
+};
 
 function App() {
   return (
@@ -29,10 +35,26 @@ function App() {
         <ThemeProvider>
           <Header />
           <Tab.Navigator initialRouteName="Home">
-            <Tab.Screen name="VetApp" component={HomePage} options={{ headerShown: false }} />
-            <Tab.Screen name="GI Bill" component={GIBPage} options={{ headerShown: false }} />
-            <Tab.Screen name="VA Loan" component={VALoanPage} options={{ headerShown: false }} />
-            <Tab.Screen name="VA Disability" component={DisabilityPage} options={{ headerShown: false }} />
+            <Tab.Screen
+              name="VetApp"
+              component={HomePage}
+              options={{ headerShown: false }}
+            />
+            <Tab.Screen
+              name="GI Bill"
+              component={GIBPage}
+              options={{ headerShown: false }}
+            />
+            <Tab.Screen
+              name="VA Loan"
+              component={VALoanPage}
+              options={{ headerShown: false }}
+            />
+            <Tab.Screen
+              name="VA Disability"
+              component={DisabilityPage}
+              options={{ headerShown: false }}
+            />
             {/* <Stack.Screen name="Login" component={LoginScreen} /> */}
           </Tab.Navigator>
         </ThemeProvider>

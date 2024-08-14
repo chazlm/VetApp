@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   },
   content: {
     paddingHorizontal: 20,
-    paddingTop: 20
+    paddingTop: 20,
   },
   tab: {
     marginVertical: 10,
@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 2,
+    fontFamily: "Montserrat",
   },
   tabTitle: {
     fontSize: 18,

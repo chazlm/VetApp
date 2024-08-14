@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
   tabTitle: {
     fontSize: 18,
     fontWeight: "bold",
+    fontFamily: "Montserrat",
   },
   content: {
     padding: 10,
@@ -48,6 +49,7 @@ const styles = StyleSheet.create({
   section: {
     fontSize: 16,
     marginBottom: 50,
+    fontFamily: "Montserrat",
   },
 });
 

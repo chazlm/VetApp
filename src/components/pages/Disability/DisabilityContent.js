@@ -73,25 +73,24 @@ const styles = StyleSheet.create({
   tabTitle: {
     fontSize: 18,
     fontWeight: "bold",
+    fontFamily: "Montserrat",
   },
   content: {
     padding: 10,
     backgroundColor: "white",
     marginBottom: 5,
+    fontFamily: "Montserrat",
   },
   section: {
     fontSize: 16,
     marginBottom: 50,
+    fontFamily: "Montserrat",
   },
   bulletPoint: {
     fontSize: 16,
     marginBottom: 10,
     paddingLeft: 10,
-  },
-  link: {
-    fontSize: 16,
-    color: "blue",
-    textDecorationLine: "underline",
+    fontFamily: "Montserrat",
   },
   chartContainer: {
     display: "flex",
@@ -104,6 +103,7 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline",
     marginBottom: 50,
     marginLeft: 20,
+    fontFamily: "Montserrat",
   },
   question: {
     fontSize: 18,

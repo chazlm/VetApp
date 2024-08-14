@@ -30,18 +30,6 @@ export const GIBPage = () => {
           toggle={() => toggleTab("content")}
           theme={theme}
         />
-
-        {/* <BDD
-          isCollapsed={activeTab !== "BDD"}
-          toggle={() => toggleTab("BDD")}
-          theme={theme}
-        />
-
-        <Disability
-          isCollapsed={activeTab !== "Disability"}
-          toggle={() => toggleTab("Disability")}
-          theme={theme}
-        /> */}
       </ScrollView>
     </KeyboardAvoidingView>
   );
@@ -54,7 +42,7 @@ const styles = StyleSheet.create({
 
   content: {
     paddingHorizontal: 20,
-    paddingTop: 20
+    paddingTop: 20,
   },
   tab: {
     marginVertical: 10,

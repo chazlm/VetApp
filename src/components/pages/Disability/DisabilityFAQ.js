@@ -11,10 +11,10 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
       </TouchableOpacity>
       <Collapsible collapsed={isCollapsed}>
         <View style={styles.content}>
-          <Text style={styles.question}>
+          <Text style={styles.faqQuestion}>
             What is VA Disability Compensation?
           </Text>
-          <Text style={styles.answer}>
+          <Text style={styles.faqAnswer}>
             VA Disability Compensation is a tax-free monetary benefit paid to
             veterans with disabilities resulting from diseases or injuries
             incurred or aggravated during active military service. It also
@@ -32,10 +32,10 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
           >
             VA Website to Submit a Claim
           </Text>
-          <Text style={styles.question}>
+          <Text style={styles.faqQuestion}>
             How do I apply for VA disability benefits?
           </Text>
-          <Text style={styles.answer}>
+          <Text style={styles.faqAnswer}>
             Veterans can apply for VA disability benefits in three ways:
             {"\n"}1. <Text style={styles.bold}>Online</Text>: Through the VA’s
             eBenefits portal. This is the most convenient and quickest method.
@@ -49,10 +49,10 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
             from fellow service members to bolster your claim.
           </Text>
 
-          <Text style={styles.question}>
+          <Text style={styles.faqQuestion}>
             What are Veteran Service Organizations (VSOs)?
           </Text>
-          <Text style={styles.answer}>
+          <Text style={styles.faqAnswer}>
             Veteran Service Organizations (VSOs) support and advocate for
             veterans, providing assistance with VA claims, representation, and
             various support services. Well-known VSOs include the American
@@ -70,11 +70,11 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
             VSO Info
           </Text>
 
-          <Text style={styles.question}>
+          <Text style={styles.faqQuestion}>
             Can I receive both VA disability compensation and military
             retirement pay?
           </Text>
-          <Text style={styles.answer}>
+          <Text style={styles.faqAnswer}>
             Yes, you can receive both, but there are specific conditions. This
             is known as Concurrent Retirement and Disability Pay (CRDP). To
             qualify:
@@ -85,10 +85,10 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
             a reduction in either benefit.
           </Text>
 
-          <Text style={styles.question}>
+          <Text style={styles.faqQuestion}>
             What is Individual Unemployability (IU)?
           </Text>
-          <Text style={styles.answer}>
+          <Text style={styles.faqAnswer}>
             Individual Unemployability, or IU, is a part of VA's disability
             compensation program that allows the VA to pay certain veterans
             disability compensation at the 100% rate, even if their
@@ -98,10 +98,10 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
             disabilities.
           </Text>
 
-          <Text style={styles.question}>
+          <Text style={styles.faqQuestion}>
             How often does the VA review disability ratings?
           </Text>
-          <Text style={styles.answer}>
+          <Text style={styles.faqAnswer}>
             The VA reviews disability ratings periodically to ensure veterans
             receive the appropriate level of compensation for their current
             condition. The frequency of these reviews depends on the likelihood
@@ -115,8 +115,8 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
             need for future examinations.
           </Text>
 
-          <Text style={styles.question}>What is the 5-Year Rule?</Text>
-          <Text style={styles.answer}>
+          <Text style={styles.faqQuestion}>What is the 5-Year Rule?</Text>
+          <Text style={styles.faqAnswer}>
             The 5-year rule means that if your VA disability rating has been in
             place for five years or more and has not shown any significant
             improvement, the VA cannot reduce your rating unless there is
@@ -125,8 +125,8 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
             disability rating.
           </Text>
 
-          <Text style={styles.question}>What is the 10-Year Rule?</Text>
-          <Text style={styles.answer}>
+          <Text style={styles.faqQuestion}>What is the 10-Year Rule?</Text>
+          <Text style={styles.faqAnswer}>
             The 10-year rule provides that if a veteran has been rated as
             service-connected for a condition for ten years or more, the VA
             cannot terminate service connection for that condition. While the VA
@@ -135,8 +135,8 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
             service.
           </Text>
 
-          <Text style={styles.question}>What is the 20-Year Rule?</Text>
-          <Text style={styles.answer}>
+          <Text style={styles.faqQuestion}>What is the 20-Year Rule?</Text>
+          <Text style={styles.faqAnswer}>
             The 20-year rule ensures that if a veteran has been receiving a VA
             disability rating for 20 years or more, the VA cannot reduce the
             rating below the lowest level of disability assigned during that
@@ -144,10 +144,10 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
             stability for veterans with longstanding disability ratings.
           </Text>
 
-          <Text style={styles.question}>
+          <Text style={styles.faqQuestion}>
             What can cause a veteran to lose their benefits?
           </Text>
-          <Text style={styles.answer}>
+          <Text style={styles.faqAnswer}>
             Veterans can lose their benefits if:
             {"\n"}1.{" "}
             <Text style={styles.bold}>Clear and Unmistakable Error</Text>: If
@@ -160,18 +160,18 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
             release.
           </Text>
 
-          <Text style={styles.question}>How can I request my C-File?</Text>
-          <Text style={styles.answer}>
+          <Text style={styles.faqQuestion}>How can I request my C-File?</Text>
+          <Text style={styles.faqAnswer}>
             A C-File contains all documents related to your VA claims. Request
             it to review your records and ensure accuracy. You can request it
             online through the VA’s eBenefits portal, by mail to your regional
             VA office, or in person. Reviewing your C-File helps in
             understanding your claims and preparing for appeals if necessary.
           </Text>
-          <Text style={styles.question}>
+          <Text style={styles.faqQuestion}>
             What are Special Monthly Compensation (SMC) Codes?
           </Text>
-          <Text style={styles.answer}>
+          <Text style={styles.faqAnswer}>
             Special Monthly Compensation (SMC) is an additional tax-free benefit
             that can be paid to veterans, their spouses, surviving spouses, and
             parents. SMC is a higher rate of compensation due to special
@@ -196,10 +196,12 @@ const styles = StyleSheet.create({
   tabTitle: {
     fontSize: 18,
     fontWeight: "bold",
+    fontFamily: "Montserrat",
   },
   tabSubtitle: {
     fontSize: "14px",
     color: "grey",
+    fontFamily: "Montserrat",
   },
   content: {
     padding: 10,
@@ -208,7 +210,8 @@ const styles = StyleSheet.create({
   },
   section: {
     fontSize: 16,
-    marginBottom: 50,
+    marginBottom: 10,
+    lineHeight: 24,
   },
   bulletPoint: {
     fontSize: 16,
@@ -219,10 +222,23 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "blue",
     textDecorationLine: "underline",
+    fontFamily: "Montserrat",
   },
   header: {
     fontSize: 16,
     marginBottom: 50,
     fontWeight: "bold",
+  },
+  faqAnswer: {
+    fontSize: 16,
+    marginBottom: 10,
+    lineHeight: 24,
+    fontFamily: "Montserrat",
+  },
+  faqQuestion: {
+    fontSize: 16,
+    marginBottom: 10,
+    lineHeight: 24,
+    fontFamily: "Montserrat",
   },
 });

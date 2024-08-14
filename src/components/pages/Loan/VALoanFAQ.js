@@ -14,7 +14,7 @@ export const VALoanFAQ = ({ isCollapsed, toggle }) => {
   return (
     <>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
-        <Text style={styles.tabTitle}>Disability FAQ</Text>
+        <Text style={styles.tabTitle}>VA Loan FAQ</Text>
       </TouchableOpacity>
       <Collapsible collapsed={isCollapsed}>
         <View style={styles.content}>
@@ -73,10 +73,12 @@ const styles = StyleSheet.create({
   tabTitle: {
     fontSize: 18,
     fontWeight: "bold",
+    fontFamily: "Montserrat",
   },
   tabSubtitle: {
     fontSize: "14px",
     color: "grey",
+    fontFamily: "Montserrat",
   },
   content: {
     padding: 10,
@@ -85,7 +87,9 @@ const styles = StyleSheet.create({
   },
   section: {
     fontSize: 16,
-    marginBottom: 50,
+    marginBottom: 10,
+    lineHeight: 24,
+    fontFamily: "Montserrat",
   },
   container: {
     padding: 16,
@@ -112,5 +116,18 @@ const styles = StyleSheet.create({
     color: "blue",
     textDecorationLine: "underline",
     marginTop: 20,
+    fontFamily: "Montserrat",
+  },
+  faqAnswer: {
+    fontSize: 16,
+    marginBottom: 10,
+    lineHeight: 24,
+    fontFamily: "Montserrat",
+  },
+  faqQuestion: {
+    fontSize: 16,
+    marginBottom: 10,
+    lineHeight: 24,
+    fontFamily: "Montserrat",
   },
 });
