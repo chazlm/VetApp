@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { Picker } from "@react-native-picker/picker";
-import { stateData } from "../../../utils/stateData";
+import { salaries, stateData } from "../../../utils/data";
 import { useTheme } from "../../../utils/theme";
 
 const calculateUnemployment = (state, monthlyEarnings) => {
@@ -28,8 +28,8 @@ const generateBenefitText = (state, benefit) => {
 const UnemploymentCalculator = () => {
   const theme = useTheme();
 
-  const [state, setState] = useState("AL");
-  const [monthlyEarnings, setMonthlyEarnings] = useState("2000");
+  const [state, setState] = useState("FL");
+  const [monthlyEarnings, setMonthlyEarnings] = useState(2000);
   const [weeklyBenefit, setWeeklyBenefit] = useState(null);
 
   const handleCalculate = () => {
@@ -45,32 +45,41 @@ const UnemploymentCalculator = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Select your state:</Text>
-      <Picker
-        selectedValue={state}
-        style={styles.picker}
-        onValueChange={(itemValue) => setState(itemValue)}
-      >
-        {Object.keys(stateData).map((stateKey) => (
-          <Picker.Item
-            key={stateKey}
-            label={stateData[stateKey].name}
-            value={stateKey}
-          />
-        ))}
-      </Picker>
-      <Text style={styles.label}>
-        Enter your monthly earnings (before tax):
+      <Text style={styles.text}>
+        Pick your state and monthly salary (before taxes)
       </Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Monthly Earnings"
-        keyboardType="numeric"
-        returnKeyType="done"
-        value={monthlyEarnings}
-        onChangeText={setMonthlyEarnings}
-        onSubmitEditing={handleCalculate}
-      />
+      <View style={styles.pickerContainer}>
+        <View style={styles.picker}>
+          {/* <Text style={styles.label}>Select your state:</Text> */}
+          <Picker
+            selectedValue={state}
+            // style={styles.picker}
+            onValueChange={(itemValue) => setState(itemValue)}
+          >
+            {Object.keys(stateData).map((stateKey) => (
+              <Picker.Item
+                key={stateKey}
+                label={stateData[stateKey].name}
+                value={stateKey}
+              />
+            ))}
+          </Picker>
+        </View>
+        <View style={styles.picker}>
+          {/* <Text style={styles.label}>
+            Enter your monthly earnings (before tax):
+          </Text> */}
+          <Picker
+            selectedValue={monthlyEarnings}
+            style={styles.picker}
+            onValueChange={setMonthlyEarnings}
+          >
+            {salaries.map((salary) => (
+              <Picker.Item key={salary} label={salary} value={salary} />
+            ))}
+          </Picker>
+        </View>
+      </View>
       <Button title="Calculate" onPress={handleCalculate} />
       <View
         style={[styles.stateBox, { backgroundColor: theme.colors.supalight }]}
@@ -82,35 +91,35 @@ const UnemploymentCalculator = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-  },
+  container: {},
   label: {
     fontSize: 16,
-    marginBottom: 10,
+    textAlign: "center",
   },
   picker: {
-    height: 50,
-    marginBottom: 50,
-    maxHeight: 80,
-    minHeight: 80,
+    flex: 1,
+    marginHorizontal: 5,
   },
-  input: {
-    maxHeight: 80,
-    minHeight: 80,
-    borderColor: "gray",
-    borderWidth: 1,
-    marginBottom: 50,
+  text: {
     paddingHorizontal: 10,
+    textAlign: "center",
+    fontSize: 15,
+    fontWeight: "bold",
   },
   result: {
     marginTop: 20,
     fontSize: 18,
     fontWeight: "bold",
+    padding: 10,
   },
   stateBox: {
     height: 120,
     marginTop: 20,
+  },
+  pickerContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
 });
 

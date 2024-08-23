@@ -53,18 +53,15 @@ const styles = StyleSheet.create({
   tabTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    fontFamily: "Montserrat",
   },
   content: {
     padding: 10,
     backgroundColor: "white",
     marginBottom: 5,
-    fontFamily: "Montserrat",
   },
   section: {
     fontSize: 16,
-    marginBottom: 50,
-    fontFamily: "Montserrat",
+    marginBottom: 20,
   },
   toolContainer: {
     marginVertical: 20,

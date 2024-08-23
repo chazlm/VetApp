@@ -37,12 +37,15 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
           </Text>
           <Text style={styles.faqAnswer}>
             Veterans can apply for VA disability benefits in three ways:
+            {"\n"}
             {"\n"}1. <Text style={styles.bold}>Online</Text>: Through the VA’s
             eBenefits portal. This is the most convenient and quickest method.
+            {"\n"}
             {"\n"}2. <Text style={styles.bold}>By Mail</Text>: Download and fill
             out VA Form 21-526EZ, "Application for Disability Compensation and
             Related Compensation Benefits," and send it to the appropriate VA
             regional office.
+            {"\n"}
             {"\n"}3. <Text style={styles.bold}>In Person</Text>: Visit a VA
             regional office to apply. It can be helpful to bring supporting
             documents such as medical records, service records, and statements
@@ -196,12 +199,10 @@ const styles = StyleSheet.create({
   tabTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    fontFamily: "Montserrat",
   },
   tabSubtitle: {
     fontSize: "14px",
     color: "grey",
-    fontFamily: "Montserrat",
   },
   content: {
     padding: 10,
@@ -222,23 +223,21 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "blue",
     textDecorationLine: "underline",
-    fontFamily: "Montserrat",
   },
   header: {
     fontSize: 16,
-    marginBottom: 50,
+    marginBottom: 20,
     fontWeight: "bold",
   },
   faqAnswer: {
     fontSize: 16,
     marginBottom: 10,
     lineHeight: 24,
-    fontFamily: "Montserrat",
   },
   faqQuestion: {
     fontSize: 16,
     marginBottom: 10,
     lineHeight: 24,
-    fontFamily: "Montserrat",
+    fontWeight: "bold",
   },
 });

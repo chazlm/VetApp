@@ -105,29 +105,24 @@ const styles = StyleSheet.create({
   tabTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    fontFamily: "Montserrat",
   },
   tabSubtitle: {
     fontSize: "14px",
     color: "grey",
-    fontFamily: "Montserrat",
   },
   content: {
     padding: 10,
     backgroundColor: "white",
     marginBottom: 5,
-    fontFamily: "Montserrat",
   },
   section: {
     fontSize: 16,
-    marginBottom: 50,
-    fontFamily: "Montserrat",
+    marginBottom: 20,
   },
   bulletPoint: {
     fontSize: 16,
     marginBottom: 10,
     paddingLeft: 10,
-    fontFamily: "Montserrat",
   },
   link: {
     fontSize: 16,
@@ -136,9 +131,8 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 16,
-    marginBottom: 50,
+    marginBottom: 20,
     fontWeight: "bold",
-    fontFamily: "Montserrat",
   },
 });
 

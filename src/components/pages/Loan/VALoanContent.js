@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
   tabTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    fontFamily: "Montserrat",
   },
   content: {
     padding: 20,
@@ -70,13 +69,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 10,
     lineHeight: 24,
-    fontFamily: "Montserrat",
   },
   bulletPoint: {
     fontSize: 16,
     marginBottom: 8,
     lineHeight: 24,
-    fontFamily: "Montserrat",
   },
 });
 

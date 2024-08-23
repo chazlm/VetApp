@@ -3,7 +3,7 @@ import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 
 const DisabilityCalculator = () => {
-  const [percentage, setPercentage] = useState("");
+  const [percentage, setPercentage] = useState("50");
   const [result, setResult] = useState(null);
 
   const calculateDisability = () => {
@@ -77,12 +77,13 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 18,
     marginBottom: 10,
+    textAlign: "center",
   },
   input: {
     borderWidth: 1,
     borderColor: "#ccc",
     padding: 10,
-    marginBottom: 50,
+    marginBottom: 20,
   },
   result: {
     marginTop: 20,
@@ -90,7 +91,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   picker: {
-    marginBottom: 50,
+    marginBottom: 20,
   },
 });
 

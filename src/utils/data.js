@@ -51,3 +51,7 @@ export const stateData = {
   WI: { name: "Wisconsin", minBenefit: 54, maxBenefit: 370 },
   WY: { name: "Wyoming", minBenefit: 38, maxBenefit: 533 },
 };
+
+export const salaries = [
+  500, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000,
+];
