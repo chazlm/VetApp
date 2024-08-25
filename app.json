@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "VetApp",
-    "slug": "vetapp",
+    "name": "Vetter",
+    "slug": "vetter",
     "scheme": "vet",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,7 +13,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.scalper.vetter"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,13 +26,13 @@
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
     },
-    "plugins": [
-      "expo-secure-store",
-      "expo-font"
-    ],
+    "plugins": ["expo-secure-store", "expo-font", "expo-router"],
     "extra": {
       "eas": {
-        "projectId": "968cd552-e5f0-492e-9a38-b6b2d6f6c7a8"
+        "projectId": "44d456ca-c346-41ef-afd7-e4f255cbf165"
+      },
+      "router": {
+        "origin": false
       }
     },
     "owner": "scalper",
@@ -39,7 +40,7 @@
       "policy": "appVersion"
     },
     "updates": {
-      "url": "https://u.expo.dev/968cd552-e5f0-492e-9a38-b6b2d6f6c7a8"
+      "url": "https://u.expo.dev/44d456ca-c346-41ef-afd7-e4f255cbf165"
     }
   }
 }

@@ -18,7 +18,7 @@ const Header = ({ title, onLoginPress }) => {
   return (
     <View style={styles.header}>
       <Text style={styles.logo}>
-        vet<Text style={styles.logoApp}>app</Text>
+        vet<Text style={styles.logoApp}>ter</Text>
       </Text>
       {config.showLoginButton && (
         <TouchableOpacity style={styles.loginButton}>

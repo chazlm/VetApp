@@ -25,7 +25,7 @@ function App() {
               tabBarIcon: ({ focused, color, size }) => {
                 let iconName;
 
-                if (route.name === "VetApp") {
+                if (route.name === "Vetter") {
                   iconName = focused ? "home" : "home-outline";
                 } else if (route.name === "GI Bill") {
                   iconName = focused ? "school" : "school-outline";
@@ -43,7 +43,7 @@ function App() {
             })}
           >
             <Tab.Screen
-              name="VetApp"
+              name="Vetter"
               component={HomePage}
               options={{ headerShown: false }}
             />
