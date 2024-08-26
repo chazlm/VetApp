@@ -18,7 +18,7 @@ const Header = ({ title, onLoginPress }) => {
   return (
     <View style={styles.header}>
       <Text style={styles.logo}>
-        vet<Text style={styles.logoApp}>ter</Text>
+        vet<Text style={styles.logoApp}>era</Text>
       </Text>
       {config.showLoginButton && (
         <TouchableOpacity style={styles.loginButton}>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   logo: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "#2d9cdb",
+    color: "rgb(46 219 45)",
   },
   logoApp: {
     fontWeight: "normal",

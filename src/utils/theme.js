@@ -2,9 +2,9 @@ import React, { createContext, useContext } from "react";
 
 const theme = {
   colors: {
-    primary: "rgb(45, 156, 219)",
-    light: "rgb(155 199 223)",
-    supalight: "rgb(217 241 255)",
+    primary: "rgb(111 219 111)",
+    light: "rgb(184 229 184))",
+    supalight: "rgb(205 225 205)",
     secondary: "#333",
     background: "#f8f8f8",
     text: "#555",
@@ -20,6 +20,15 @@ const theme = {
     small: 5,
     medium: 10,
     large: 15,
+  },
+  tabHeader: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  link: {
+    fontSize: 16,
+    color: "#2d9cdb",
+    textDecorationLine: "underline",
   },
 };
 

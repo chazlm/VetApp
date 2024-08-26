@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Vetter",
-    "slug": "vetter",
+    "name": "Vetera",
+    "slug": "vetera",
     "scheme": "vet",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -14,7 +14,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.scalper.vetter"
+      "bundleIdentifier": "com.scalper.vetera"
     },
     "android": {
       "adaptiveIcon": {
@@ -29,7 +29,7 @@
     "plugins": ["expo-secure-store", "expo-font", "expo-router"],
     "extra": {
       "eas": {
-        "projectId": "44d456ca-c346-41ef-afd7-e4f255cbf165"
+        "projectId": "9cab097a-c3f0-49dd-8443-d9230653fdaf"
       },
       "router": {
         "origin": false

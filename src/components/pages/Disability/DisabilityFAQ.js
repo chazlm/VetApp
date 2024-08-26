@@ -7,7 +7,7 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
   return (
     <>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
-        <Text style={styles.tabTitle}>Disability FAQ</Text>
+        <Text style={theme.tabHeader}>Disability FAQ</Text>
       </TouchableOpacity>
       <Collapsible collapsed={isCollapsed}>
         <View style={styles.content}>
@@ -23,7 +23,7 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
             100%) and the number of dependents.
           </Text>
           <Text
-            style={styles.link}
+            style={theme.link}
             onPress={() =>
               Linking.openURL(
                 "https://www.va.gov/disability/how-to-file-claim/"
@@ -65,7 +65,7 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
           </Text>
 
           <Text
-            style={styles.link}
+            style={theme.link}
             onPress={() =>
               Linking.openURL("https://www.va.gov/ogc/recognizedvsos.asp")
             }
@@ -196,10 +196,6 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     marginBottom: 5,
   },
-  tabTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
   tabSubtitle: {
     fontSize: "14px",
     color: "grey",
@@ -218,11 +214,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 10,
     paddingLeft: 10,
-  },
-  link: {
-    fontSize: 16,
-    color: "blue",
-    textDecorationLine: "underline",
   },
   header: {
     fontSize: 16,

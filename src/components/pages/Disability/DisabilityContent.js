@@ -15,7 +15,7 @@ const DisabilityContent = ({ isCollapsed, toggle, theme }) => {
   return (
     <SafeAreaProvider>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
-        <Text style={styles.tabTitle}>VA Disability</Text>
+        <Text style={theme.tabHeader}>VA Disability</Text>
       </TouchableOpacity>
       <Collapsible collapsed={isCollapsed}>
         <View style={styles.content}>
@@ -47,7 +47,7 @@ const DisabilityContent = ({ isCollapsed, toggle, theme }) => {
             disability percentages .
           </Text>
           <Text
-            style={styles.link}
+            style={theme.link}
             onPress={() =>
               Linking.openURL(
                 "https://www.reddit.com/r/VeteransBenefits/wiki/combinedbenefits/"
@@ -70,10 +70,6 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     marginBottom: 5,
   },
-  tabTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
   content: {
     padding: 10,
     backgroundColor: "white",
@@ -92,13 +88,6 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     padding: "2rem",
-  },
-  link: {
-    fontSize: 16,
-    color: "blue",
-    textDecorationLine: "underline",
-    marginBottom: 20,
-    marginLeft: 20,
   },
   question: {
     fontSize: 18,

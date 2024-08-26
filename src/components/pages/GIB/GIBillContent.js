@@ -10,11 +10,11 @@ import {
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import Collapsible from "react-native-collapsible";
 
-export const GIBillContent = ({ isCollapsed, toggle }) => {
+export const GIBillContent = ({ isCollapsed, toggle, theme }) => {
   return (
     <SafeAreaProvider>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
-        <Text style={styles.tabTitle}>GI Bill</Text>
+        <Text style={theme.tabHeader}>GI Bill</Text>
       </TouchableOpacity>
       <Collapsible collapsed={isCollapsed}>
         <View style={styles.content}>
@@ -81,7 +81,7 @@ export const GIBillContent = ({ isCollapsed, toggle }) => {
           </Text>
 
           <Text
-            style={styles.link}
+            style={theme.link}
             onPress={() =>
               Linking.openURL(
                 "https://www.va.gov/education/about-gi-bill-benefits/"
@@ -103,11 +103,6 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: "white",
     marginBottom: 5,
-  },
-  tabTitle: {
-    fontSize: 18,
-    fontWeight: 800,
-    color: "black",
   },
   content: {
     padding: 20,
@@ -140,10 +135,5 @@ const styles = StyleSheet.create({
   image: {
     width: 200,
     height: 200,
-  },
-  link: {
-    fontSize: 16,
-    color: "#2d9cdb",
-    textDecorationLine: "underline",
   },
 });

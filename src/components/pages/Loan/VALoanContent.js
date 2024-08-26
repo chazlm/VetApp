@@ -10,11 +10,11 @@ import {
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import Collapsible from "react-native-collapsible";
 
-export const VALoanContent = ({ isCollapsed, toggle }) => {
+export const VALoanContent = ({ isCollapsed, toggle, theme }) => {
   return (
     <SafeAreaProvider>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
-        <Text style={styles.tabTitle}>VA Loan</Text>
+        <Text style={theme.tabHeader}>VA Loan</Text>
       </TouchableOpacity>
       <Collapsible collapsed={isCollapsed}>
         <View style={styles.content}>
@@ -55,10 +55,6 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: "white",
     marginBottom: 5,
-  },
-  tabTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
   },
   content: {
     padding: 20,

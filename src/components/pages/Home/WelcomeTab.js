@@ -6,7 +6,7 @@ export const LeavingTheGunClub = ({ isCollapsed, toggle, theme }) => {
   return (
     <>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
-        <Text style={styles.tabTitle}>Leaving the Gun Club?</Text>
+        <Text style={theme.tabHeader}>Leaving the Gun Club?</Text>
       </TouchableOpacity>
       <Collapsible collapsed={isCollapsed}>
         <View style={styles.content}>
@@ -35,10 +35,6 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: "white",
     marginBottom: 5,
-  },
-  tabTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
   },
   content: {
     padding: 10,

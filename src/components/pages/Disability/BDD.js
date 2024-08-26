@@ -7,7 +7,7 @@ const BDD = ({ isCollapsed, toggle, theme }) => {
   return (
     <>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
-        <Text style={styles.tabTitle}>
+        <Text style={theme.tabHeader}>
           Benefits Delivery at Discharge
           <Text style={styles.tabSubtitle}> (Entryway to VA Disability)</Text>
         </Text>
@@ -81,7 +81,7 @@ const BDD = ({ isCollapsed, toggle, theme }) => {
             their application, or visit a local VA office.
           </Text>
           <Text
-            style={styles.link}
+            style={theme.link}
             onPress={() =>
               Linking.openURL(
                 "https://benefits.va.gov/BENEFITS/benefits-delivery-discharge-program.asp"
@@ -102,10 +102,6 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     marginBottom: 5,
   },
-  tabTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
   tabSubtitle: {
     fontSize: "14px",
     color: "grey",
@@ -123,11 +119,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 10,
     paddingLeft: 10,
-  },
-  link: {
-    fontSize: 16,
-    color: "blue",
-    textDecorationLine: "underline",
   },
   header: {
     fontSize: 16,

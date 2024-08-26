@@ -10,11 +10,11 @@ import {
 import Collapsible from "react-native-collapsible";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export const VALoanFAQ = ({ isCollapsed, toggle }) => {
+export const VALoanFAQ = ({ isCollapsed, toggle, theme }) => {
   return (
     <>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
-        <Text style={styles.tabTitle}>VA Loan FAQ</Text>
+        <Text style={theme.tabHeader}>VA Loan FAQ</Text>
       </TouchableOpacity>
       <Collapsible collapsed={isCollapsed}>
         <View style={styles.content}>
@@ -49,7 +49,7 @@ export const VALoanFAQ = ({ isCollapsed, toggle }) => {
           </Text>
 
           <Text
-            style={styles.link}
+            style={theme.link}
             onPress={() =>
               Linking.openURL(
                 "https://www.va.gov/housing-assistance/home-loans/"
@@ -69,10 +69,6 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: "white",
     marginBottom: 5,
-  },
-  tabTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
   },
   tabSubtitle: {
     fontSize: "14px",
@@ -107,12 +103,6 @@ const styles = StyleSheet.create({
   },
   bold: {
     fontWeight: "bold",
-  },
-  link: {
-    fontSize: 16,
-    color: "blue",
-    textDecorationLine: "underline",
-    marginTop: 20,
   },
   faqAnswer: {
     fontSize: 16,

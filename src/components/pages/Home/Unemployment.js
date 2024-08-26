@@ -14,7 +14,7 @@ const UnemploymentBenefitCalculator = ({ isCollapsed, toggle, theme }) => {
   return (
     <>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
-        <Text style={styles.tabTitle}>Unemployment Benefit Calculator</Text>
+        <Text style={theme.tabHeader}>Unemployment Benefit Calculator</Text>
       </TouchableOpacity>
       <Collapsible collapsed={isCollapsed}>
         <View style={styles.content}>
@@ -49,10 +49,6 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: "white",
     marginBottom: 5,
-  },
-  tabTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
   },
   content: {
     padding: 10,
