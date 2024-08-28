@@ -57,7 +57,7 @@ const DisabilityContent = ({ isCollapsed, toggle, theme }) => {
             Comprehensive Guide on Reddit
           </Text>
 
-          <DisabilityCalculator />
+          <DisabilityCalculator theme={theme} />
         </View>
       </Collapsible>
     </SafeAreaProvider>

@@ -11,6 +11,7 @@ import {
 import { useTheme } from "../../../utils/theme";
 import VALoanContent from "./VALoanContent";
 import { VALoanFAQ } from "./VALoanFAQ";
+import VALoanCalculator from "./VALoanCalculator";
 
 export const VALoanPage = () => {
   const [activeTab, setActiveTab] = useState("LeavingTheGunClub");
@@ -27,16 +28,20 @@ export const VALoanPage = () => {
     >
       <ScrollView contentContainerStyle={styles.content}>
         <VALoanContent
-          isCollapsed={activeTab !== "LeavingTheGunClub"}
-          toggle={() => toggleTab("LeavingTheGunClub")}
+          isCollapsed={activeTab !== "content"}
+          toggle={() => toggleTab("content")}
           theme={theme}
         />
         <VALoanFAQ
-          isCollapsed={activeTab !== "BDD"}
-          toggle={() => toggleTab("BDD")}
+          isCollapsed={activeTab !== "faq"}
+          toggle={() => toggleTab("faq")}
           theme={theme}
         />
-
+        <VALoanCalculator
+          isCollapsed={activeTab !== "calculator"}
+          toggle={() => toggleTab("calculator")}
+          theme={theme}
+        />
         {/* <Disability
           isCollapsed={activeTab !== "Disability"}
           toggle={() => toggleTab("Disability")}
@@ -54,7 +59,7 @@ const styles = StyleSheet.create({
 
   content: {
     paddingHorizontal: 20,
-    paddingTop: 20
+    paddingTop: 20,
   },
   tab: {
     marginVertical: 10,

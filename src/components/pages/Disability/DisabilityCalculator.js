@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 
-const DisabilityCalculator = () => {
+const DisabilityCalculator = ({ theme }) => {
   const [percentage, setPercentage] = useState("50");
   const [result, setResult] = useState(null);
 
@@ -62,7 +62,9 @@ const DisabilityCalculator = () => {
       </Picker>
       <Button title="Calculate" onPress={calculateDisability} />
       {result !== null && (
-        <Text style={styles.result}>
+        <Text
+          style={[styles.result, { backgroundColor: theme.colors.supalight }]}
+        >
           Estimated Monthly Payment: ${result.toFixed(2)}
         </Text>
       )}

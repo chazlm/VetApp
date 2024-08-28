@@ -47,6 +47,15 @@ export const VALoanFAQ = ({ isCollapsed, toggle, theme }) => {
             limited closing costs. Additionally, VA Loans are more lenient with
             credit requirements than conventional loans.
           </Text>
+          <Text style={styles.faqQuestion}>What is a VA funding fee?</Text>
+          <Text style={styles.faqAnswer}>
+            The VA funding fee is a one-time payment required by the Department
+            of Veterans Affairs for VA home loans. The fee varies based on the
+            type of loan, the down payment amount, and whether it's the
+            borrower's first VA loan. Veterans with service-connected
+            disabilities may be exempt from paying this fee, making
+            homeownership more affordable.
+          </Text>
 
           <Text
             style={theme.link}

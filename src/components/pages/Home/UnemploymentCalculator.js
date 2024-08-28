@@ -81,11 +81,13 @@ const UnemploymentCalculator = () => {
         </View>
       </View>
       <Button title="Calculate" onPress={handleCalculate} />
-      <View
-        style={[styles.stateBox, { backgroundColor: theme.colors.supalight }]}
-      >
-        {weeklyBenefit && <Text style={styles.result}>{weeklyBenefit}</Text>}
-      </View>
+      {weeklyBenefit && (
+        <View
+          style={[styles.stateBox, { backgroundColor: theme.colors.supalight }]}
+        >
+          {weeklyBenefit && <Text style={styles.result}>{weeklyBenefit}</Text>}
+        </View>
+      )}
     </View>
   );
 };
