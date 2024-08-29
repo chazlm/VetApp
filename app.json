@@ -14,7 +14,8 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.scalper.vetera"
+      "bundleIdentifier": "com.scalper.vetera",
+      "buildNumber": "2"
     },
     "android": {
       "adaptiveIcon": {
@@ -26,11 +27,7 @@
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
     },
-    "plugins": [
-      "expo-secure-store",
-      "expo-font",
-      "expo-router"
-    ],
+    "plugins": ["expo-secure-store", "expo-font", "expo-router"],
     "extra": {
       "eas": {
         "projectId": "290764e7-f58b-4c90-8203-96966c37a4a3"

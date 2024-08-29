@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 10,
-    backgroundColor: "white",
+    backgroundcolor: "transparent",
     marginBottom: 5,
   },
   section: {

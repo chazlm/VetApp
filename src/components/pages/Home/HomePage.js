@@ -6,8 +6,9 @@ import {
   ScrollView,
 } from "react-native";
 import { useTheme } from "../../../utils/theme";
-import LeavingTheGunClub from "./WelcomeTab";
+import { LeavingTheGunClub } from "./WelcomeTab";
 import UnemploymentBenefitCalculator from "./Unemployment";
+import { TaxExemption } from "./TaxExemption";
 
 export const HomePage = () => {
   const [activeTab, setActiveTab] = useState("LeavingTheGunClub");
@@ -32,6 +33,11 @@ export const HomePage = () => {
         <UnemploymentBenefitCalculator
           isCollapsed={activeTab !== "UnemploymentBenefitCalculator"}
           toggle={() => toggleTab("UnemploymentBenefitCalculator")}
+          theme={theme}
+        />
+        <TaxExemption
+          isCollapsed={activeTab !== "tax"}
+          toggle={() => toggleTab("tax")}
           theme={theme}
         />
       </ScrollView>

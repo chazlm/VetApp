@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 10,
-    backgroundColor: "white",
+    backgroundcolor: "transparent",
     marginBottom: 5,
   },
   section: {
@@ -46,5 +46,3 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 });
-
-export default LeavingTheGunClub;

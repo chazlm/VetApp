@@ -72,7 +72,14 @@ export const DisabilityFAQ = ({ isCollapsed, toggle, theme }) => {
           >
             VSO Info
           </Text>
-
+          <Text style={styles.faqQuestion}>What is Total and Permanent?</Text>
+          <Text style={styles.faqAnswer}>
+            Being Total and Permanent means you are at 100% disability and your
+            conditions are static in your C-File. This means the VA does not
+            think your conditions will improve. You have more benefits available
+            to you such as CHAMPVA, Property Tax Exemption, Chapter 35 education
+            assistance, DIC and more.
+          </Text>
           <Text style={styles.faqQuestion}>
             Can I receive both VA disability compensation and military
             retirement pay?
@@ -202,7 +209,7 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 10,
-    backgroundColor: "white",
+    backgroundcolor: "transparent",
     marginBottom: 5,
   },
   section: {

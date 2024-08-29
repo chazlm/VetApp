@@ -23,7 +23,6 @@ const VALoanCalculator = ({ toggle, isCollapsed, theme }) => {
   };
 
   const uniqueStates = [...new Set(countyData.map((item) => item.state))];
-  console.log({ countyData });
   return (
     <>
       <TouchableOpacity onPress={toggle} style={styles.tab}>
@@ -113,7 +112,7 @@ const styles = StyleSheet.create({
   },
   container: {
     padding: 10,
-    backgroundColor: "white",
+    backgroundcolor: "transparent",
     marginBottom: 5,
   },
   text: {

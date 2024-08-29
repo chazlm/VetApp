@@ -32,6 +32,12 @@ const DisabilityContent = ({ isCollapsed, toggle, theme }) => {
             your injuries and wear and tear on your body, it and social security
             is the only programs I know that keep up with COLA.
           </Text>
+          <Text style={styles.bulletPoint}>
+            • There are a lot of that come with VA Disability - not just
+            financially. You will get access to VR&E, Space-A Flights, CHAMPVA,
+            DEA, and more. There's an exhaustive list that goes over benefits by
+            disability percentages .
+          </Text>
           <View style={styles.chartContainer}>
             <Image
               source={require("../../../../assets/va-disability-bar-chart.png")}
@@ -39,13 +45,6 @@ const DisabilityContent = ({ isCollapsed, toggle, theme }) => {
               resizeMode="contain"
             />
           </View>
-
-          <Text style={styles.bulletPoint}>
-            • There are a lot of that come with VA Disability - not just
-            financially. You will get access to VR&E, Space-A Flights, CHAMPVA,
-            DEA, and more. There's an exhaustive list that goes over benefits by
-            disability percentages .
-          </Text>
           <Text
             style={theme.link}
             onPress={() =>
@@ -72,7 +71,7 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 10,
-    backgroundColor: "white",
+    backgroundcolor: "transparent",
     marginBottom: 5,
   },
   section: {
@@ -87,7 +86,6 @@ const styles = StyleSheet.create({
   chartContainer: {
     display: "flex",
     alignItems: "center",
-    padding: "2rem",
   },
   question: {
     fontSize: 18,

@@ -63,6 +63,6 @@ const styles = StyleSheet.create({
   tabContent: {
     marginTop: 10,
     fontSize: 16,
-    color: "#555",
+    color: "gray",
   },
 });

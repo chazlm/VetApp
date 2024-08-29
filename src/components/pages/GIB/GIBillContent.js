@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 20,
-    backgroundColor: "#ffffff",
+    backgroundColor: "transparent",
   },
   section: {
     fontSize: 16,

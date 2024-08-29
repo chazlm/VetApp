@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import Header from "./src/components/Header";
-import { ThemeProvider } from "./src/utils/theme";
+import { ThemeProvider, useTheme } from "./src/utils/theme";
 import { HomePage } from "./src/components/pages/Home/HomePage";
 import { GIBPage } from "./src/components/pages/GIB/GiBillPage";
 import { VALoanPage } from "./src/components/pages/Loan/VALoanPage";
@@ -14,6 +14,8 @@ import Ionicons from "react-native-vector-icons/Ionicons"; // Import the icon se
 const Tab = createBottomTabNavigator();
 
 function App() {
+  const theme = useTheme();
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <NavigationContainer>
@@ -38,7 +40,7 @@ function App() {
                 // You can return any component that you like here!
                 return <Ionicons name={iconName} size={size} color={color} />;
               },
-              tabBarActiveTintColor: "tomato",
+              tabBarActiveTintColor: theme.colors.primary,
               tabBarInactiveTintColor: "gray",
             })}
           >

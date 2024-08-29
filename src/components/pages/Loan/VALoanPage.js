@@ -14,7 +14,7 @@ import { VALoanFAQ } from "./VALoanFAQ";
 import VALoanCalculator from "./VALoanCalculator";
 
 export const VALoanPage = () => {
-  const [activeTab, setActiveTab] = useState("LeavingTheGunClub");
+  const [activeTab, setActiveTab] = useState("content");
   const theme = useTheme();
 
   const toggleTab = (tab) => {
@@ -80,6 +80,6 @@ const styles = StyleSheet.create({
   tabContent: {
     marginTop: 10,
     fontSize: 16,
-    color: "#555",
+    color: "gray",
   },
 });
