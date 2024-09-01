@@ -34,7 +34,8 @@
       },
       "router": {
         "origin": false
-      }
+      },
+      "vaApiKey": "process.env.VA_API_KEY"
     },
     "owner": "scalper",
     "runtimeVersion": {

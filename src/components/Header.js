@@ -3,25 +3,44 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import * as AuthSession from "expo-auth-session";
 import config from "../../config/config";
-
-const clientId = "1f632d93334fedf2811804c884831638";
-const clientSecret = "1fcbb3cb4bc81ace8f99c36b881412fe";
-const redirectUri = "https://greenweenie.netlify.app/";
-
-const discovery = {
-  authorizationEndpoint:
-    "https://api.id.me/oauth/authorize?client_id=1f632d93334fedf2811804c884831638&redirect_uri=https://greenweenie.netlify.app/&response_type=code&scope=military",
-  tokenEndpoint: "https://api.id.me/oauth/token",
-};
+import axios from "axios";
 
 const Header = ({ title, onLoginPress }) => {
+  const handleVerify = async () => {
+    try {
+      const response = await axios.post(
+        "https://sandbox-api.va.gov/services/veteran-confirmation/v1/status",
+        {
+          firstName: "Wesley",
+          middleName: "Watson",
+          lastName: "Ford",
+          birthDate: "1986-05-06",
+          gender: "M",
+          streetAddressLine1: "1723 GOSNELL RD",
+          city: "VIENNA",
+          zipCode: "22182",
+          state: "VA",
+          country: "USA",
+        },
+        {
+          headers: {
+            apikey: "rjJDXiyVsmB0qYPjB1Su9hSYGQJAwooy", // Ensure this is correct
+            "Content-Type": "application/json",
+          },
+        }
+      );
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   return (
     <View style={styles.header}>
       <Text style={styles.logo}>
         vet<Text style={styles.logoApp}>era</Text>
       </Text>
       {config.showLoginButton && (
-        <TouchableOpacity style={styles.loginButton}>
+        <TouchableOpacity onPress={handleVerify} style={styles.loginButton}>
           <Text style={styles.loginButtonText}>Login</Text>
         </TouchableOpacity>
       )}

@@ -1,5 +1,5 @@
 const config = {
-  showLoginButton: false,
+  showLoginButton: true,
 };
 
 export default config;
