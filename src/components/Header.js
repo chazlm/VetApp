@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import * as AuthSession from "expo-auth-session";
 import config from "../../config/config";
-import ModalComponent from "./ModalComponent";
+import ModalComponent from "./pages/Login/ModalComponent";
 
 const Header = ({ title, onLoginPress }) => {
   const [showModal, setShowModal] = useState(false);
